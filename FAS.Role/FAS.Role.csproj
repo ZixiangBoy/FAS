@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74FF0330-C3AB-42C1-8BCC-1DF08E02C195}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FAS.Role</RootNamespace>
+    <AssemblyName>FAS.Role</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ultra.Business.Core">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Business.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Cache">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Common">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.CoreCaller">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.CoreCaller.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.ERP.Core">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.ERP.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Logic">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Logic.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Surface">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Surface.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Utility">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Web.Core">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Web.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Win.Core">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Win.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EdtView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdtView.Designer.cs">
+      <DependentUpon>EdtView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ultra.DbEntity\Ultra.DbEntity.csproj">
+      <Project>{ce990d0b-e38a-4552-a8b3-69daded69e7b}</Project>
+      <Name>Ultra.DbEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultra.FASControls\Ultra.FASControls.csproj">
+      <Project>{f2a4a5d8-f88e-4f0d-88ef-c8cc3a86c102}</Project>
+      <Name>Ultra.FASControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EdtView.resx">
+      <DependentUpon>EdtView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

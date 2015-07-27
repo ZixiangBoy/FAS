@@ -1,0 +1,644 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ultra.Surface</name>
+    </assembly>
+    <members>
+        <member name="T:Ultra.Surface.Form.BaseSurface">
+            <summary>
+            基础画面基类
+            </summary>
+        </member>
+        <member name="M:Ultra.Surface.Form.BaseSurface.#ctor">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="M:Ultra.Surface.Form.BaseSurface.GetCurUser``1">
+            <summary>
+            获取当前登录用户对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="F:Ultra.Surface.Form.BaseSurface.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ultra.Surface.Form.BaseSurface.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ultra.Surface.Form.BaseSurface.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Form.BaseSurface.OptConfig">
+            <summary>
+            配置读取器
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Form.BaseSurface.ConnString">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Form.BaseSurface.CurUser">
+            <summary>
+            当前登录用户
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Form.BaseSurface.GuidKey">
+            <summary>
+            Guid 键值
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Form.BaseSurface.IdKey">
+            <summary>
+            Id 键值
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Form.BaseSurface.IsUserAdmin">
+            <summary>
+            判断当前用户是否是管理员
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Form.BaseSurface.ParentView">
+            <summary>
+            父窗体
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Form.BaseSurface.LanucherParent">
+            <summary>
+            Lanuch出此画面的主画面
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Form.BaseSurface.IsNewMenu">
+            <summary>
+            是否是新菜单
+            </summary>
+        </member>
+        <member name="F:Ultra.Surface.EmptySuface.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ultra.Surface.EmptySuface.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ultra.Surface.EmptySuface.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Form.DialogView">
+            <summary>
+            对话框基类
+            </summary>
+        </member>
+        <member name="F:Ultra.Surface.Form.DialogView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ultra.Surface.Form.DialogView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ultra.Surface.Form.DialogView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Ultra.Surface.Form.DialogViewEx.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ultra.Surface.Form.DialogViewEx.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ultra.Surface.Form.DialogViewEx.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Form.MainStdView">
+            <summary>
+            标准浏览画面基类
+            </summary>
+        </member>
+        <member name="M:Ultra.Surface.Form.MainSurface.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <summary>
+            处理快捷键
+            </summary>
+            <param name="msg"></param>
+            <param name="keyData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ultra.Surface.Form.MainSurface.FloatShow">
+            <summary>
+            浮动显示
+            </summary>
+        </member>
+        <member name="F:Ultra.Surface.Form.MainSurface.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ultra.Surface.Form.MainSurface.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ultra.Surface.Form.MainSurface.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Ultra.Surface.Form.MainSurface.OnCmdKey">
+            <summary>
+            事件：当画面F* 快捷功能键按下时触发
+            </summary>
+        </member>
+        <member name="F:Ultra.Surface.Form.MainStdView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ultra.Surface.Form.MainStdView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ultra.Surface.Form.MainStdView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Interfaces.ISurfacePermission">
+            <summary>
+            UI 权限控制接口
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Interfaces.ISurfacePermission.ToolBarItems">
+            <summary>
+            有权限操作的工具栏按钮集合
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Interfaces.ISurfacePermission.ButtonItems">
+            <summary>
+            有权限操作的按钮集合
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Interfaces.ISurfacePermission.MenuItems">
+            <summary>
+            有权限操作的菜单集合
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Interfaces.ISurfacePermission.Grids">
+            <summary>
+            有操作权限的GridView
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Interfaces.ISurfacePermission.DialogForms">
+            <summary>
+            画面的内弹出对话框
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Lanuch.Lanucher">
+            <summary>
+            模块启动器
+            </summary>
+        </member>
+        <member name="M:Ultra.Surface.Lanuch.Lanucher.Start(System.String,System.String)">
+            <summary>
+            启动模块
+            </summary>
+            <param name="clsName">模块类名</param>
+            <param name="modName">模块DLL文件名</param>
+            <returns>模块对象</returns>
+        </member>
+        <member name="M:Ultra.Surface.Lanuch.Lanucher.InitView(Ultra.Surface.Form.BaseSurface)">
+            <summary>
+            设定画面相关参数及对象
+            </summary>
+            <param name="view"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ultra.Surface.Lanuch.Lanucher.GetPathByClsName(System.String)">
+            <summary>
+            获取 类对应的模块文件名
+            </summary>
+            <param name="clsName">类限定名</param>
+            <returns>类对应的模块文件名</returns>
+        </member>
+        <member name="M:Ultra.Surface.Lanuch.Lanucher.BuildPath(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据类名点分获取DLL名称
+            </summary>
+            <param name="clsNamespt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ultra.Surface.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.add_to_cart">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.agt_action_success">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.arrow_split_right">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.asspurch">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.Blue">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.BO_Persons_Large">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.bt_up">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.busy">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.currency_yuan_red">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.delivery">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.FinRestore">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.Gray">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.Green">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.hire_me">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.interact">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.list_accept">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.mail_get">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.mail_get__1_">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.make">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.New_32x32">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.printers_faxes">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.PrintTemplates_Icon__174_">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.purchase_order">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.Purple">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.Red">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.reload">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.settings">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.system_upgrade">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.tick">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.user_student_assistant">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.xchg">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.Yellow">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.分配供应商">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.分配供应商1">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.取消采购订单">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.合并采购订单">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.售后单">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.打款">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.报废">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.调换货">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Properties.Resources.质检">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Form.WindowsMessage">
+            <summary>
+            Define the window messages
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Form.WndClassType">
+            <summary>
+            Define the window class types
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Form.WndStyle">
+            <summary>
+            Window style
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Form.ExtendedWndStyle">
+            <summary>
+            Extended Window Styles
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Form.WndProcDelegate">
+            <summary>
+            WNDPROC
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ultra.Surface.Form.WNDCLASSEX">
+            <summary>
+            WNDCLASSEX
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Form.BLENDFUNCTION">
+            <summary>
+            BLENDFUNCTION
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Form.POINT">
+            <summary>
+            POINT
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Form.SIZE">
+            <summary>
+            SIZE
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Form.WindowShowStyle">
+            <summary>Enumeration of the different ways of showing a window using
+            ShowWindow</summary>
+        </member>
+        <member name="F:Ultra.Surface.Form.WindowShowStyle.Hide">
+            <summary>Hides the window and activates another window.</summary>
+            <remarks>See SW_HIDE</remarks>
+        </member>
+        <member name="F:Ultra.Surface.Form.WindowShowStyle.ShowNormal">
+            <summary>Activates and displays a window. If the window is minimized
+            or maximized, the system restores it to its original size and
+            position. An application should specify this flag when displaying
+            the window for the first time.</summary>
+            <remarks>See SW_SHOWNORMAL</remarks>
+        </member>
+        <member name="F:Ultra.Surface.Form.WindowShowStyle.ShowMinimized">
+            <summary>Activates the window and displays it as a minimized window.</summary>
+            <remarks>See SW_SHOWMINIMIZED</remarks>
+        </member>
+        <member name="F:Ultra.Surface.Form.WindowShowStyle.ShowMaximized">
+            <summary>Activates the window and displays it as a maximized window.</summary>
+            <remarks>See SW_SHOWMAXIMIZED</remarks>
+        </member>
+        <member name="F:Ultra.Surface.Form.WindowShowStyle.Maximize">
+            <summary>Maximizes the specified window.</summary>
+            <remarks>See SW_MAXIMIZE</remarks>
+        </member>
+        <member name="F:Ultra.Surface.Form.WindowShowStyle.ShowNormalNoActivate">
+            <summary>Displays a window in its most recent size and position.
+            This value is similar to "ShowNormal", except the window is not
+            actived.</summary>
+            <remarks>See SW_SHOWNOACTIVATE</remarks>
+        </member>
+        <member name="F:Ultra.Surface.Form.WindowShowStyle.Show">
+            <summary>Activates the window and displays it in its current size
+            and position.</summary>
+            <remarks>See SW_SHOW</remarks>
+        </member>
+        <member name="F:Ultra.Surface.Form.WindowShowStyle.Minimize">
+            <summary>Minimizes the specified window and activates the next
+            top-level window in the Z order.</summary>
+            <remarks>See SW_MINIMIZE</remarks>
+        </member>
+        <member name="F:Ultra.Surface.Form.WindowShowStyle.ShowMinNoActivate">
+            <summary>Displays the window as a minimized window. This value is
+            similar to "ShowMinimized", except the window is not activated.</summary>
+            <remarks>See SW_SHOWMINNOACTIVE</remarks>
+        </member>
+        <member name="F:Ultra.Surface.Form.WindowShowStyle.ShowNoActivate">
+            <summary>Displays the window in its current size and position. This
+            value is similar to "Show", except the window is not activated.</summary>
+            <remarks>See SW_SHOWNA</remarks>
+        </member>
+        <member name="F:Ultra.Surface.Form.WindowShowStyle.Restore">
+            <summary>Activates and displays the window. If the window is
+            minimized or maximized, the system restores it to its original size
+            and position. An application should specify this flag when restoring
+            a minimized window.</summary>
+            <remarks>See SW_RESTORE</remarks>
+        </member>
+        <member name="F:Ultra.Surface.Form.WindowShowStyle.ShowDefault">
+            <summary>Sets the show state based on the SW_ value specified in the
+            STARTUPINFO structure passed to the CreateProcess function by the
+            program that started the application.</summary>
+            <remarks>See SW_SHOWDEFAULT</remarks>
+        </member>
+        <member name="F:Ultra.Surface.Form.WindowShowStyle.ForceMinimized">
+            <summary>Windows 2000/XP: Minimizes a window, even if the thread
+            that owns the window is hung. This flag should only be used when
+            minimizing windows from a different thread.</summary>
+            <remarks>See SW_FORCEMINIMIZE</remarks>
+        </member>
+        <member name="F:Ultra.Surface.Form.FrameWorkBaseSuperView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ultra.Surface.Form.FrameWorkBaseSuperView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ultra.Surface.Form.FrameWorkBaseSuperView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Ultra.Surface.Form.FrameWorkBaseSuperView.DlgBgImg">
+            <summary>
+            Set the background image from file
+            </summary>
+        </member>
+        <member name="T:Ultra.Surface.Form.GDI32Dll">
+            <summary>
+            The wrapper class for GDI32.dll
+            </summary>
+        </member>
+        <member name="T:DoubleBullet.Surmnt.Surface.SuperForm.Kernal32Dll">
+            <summary>
+            The wrapper class for kernal32.dll
+            </summary>
+        </member>
+        <member name="T:DoubleBullet.Surmnt.Surface.SuperForm.User32Dll">
+            <summary>
+            The wrapper class for user32.dll
+            </summary>
+        </member>
+    </members>
+</doc>

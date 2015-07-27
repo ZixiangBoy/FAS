@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D3441CB-7A38-4AF2-925F-CF51C64F7890}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FAS.Trade</RootNamespace>
+    <AssemblyName>FAS.Trade</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1.Extensions, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EmitMapper">
+      <HintPath>..\Ultra.FAS.Refers\Ref\EmitMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq">
+      <HintPath>..\Ultra.FAS.Refers\Ref\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\Ultra.FAS.Refers\Ref\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ultra.Business.Core">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Business.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Cache">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Common">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.CoreCaller">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.CoreCaller.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Log">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Logic">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Logic.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Surface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Surface.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Web.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Web.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Win.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Win.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Xls">
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Xls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FinishProceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishProceView.Designer.cs">
+      <DependentUpon>FinishProceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvRemarkView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvRemarkView.Designer.cs">
+      <DependentUpon>InvRemarkView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewInStockView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewInStockView.Designer.cs">
+      <DependentUpon>NewInStockView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPrdView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPrdView.Designer.cs">
+      <DependentUpon>NewPrdView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdrSplitNumView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdrSplitNumView.Designer.cs">
+      <DependentUpon>OdrSplitNumView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPrdView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPrdView.Designer.cs">
+      <DependentUpon>PrintPrdView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProdInStockView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdInStockView.Designer.cs">
+      <DependentUpon>ProdInStockView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProdProceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdProceView.Designer.cs">
+      <DependentUpon>ProdProceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectProdTrdView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectProdTrdView.Designer.cs">
+      <DependentUpon>SelectProdTrdView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrdEdtView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrdEdtView.Designer.cs">
+      <DependentUpon>TrdEdtView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrdPrdView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrdPrdView.Designer.cs">
+      <DependentUpon>TrdPrdView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdtPrdView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdtPrdView.Designer.cs">
+      <DependentUpon>EdtPrdView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SCTrdEdtView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SCTrdEdtView.Designer.cs">
+      <DependentUpon>SCTrdEdtView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UploadImgView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UploadImgView.Designer.cs">
+      <DependentUpon>UploadImgView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrdCenterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrdCenterView.Designer.cs">
+      <DependentUpon>TrdCenterView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FAS.Report\FAS.Report.csproj">
+      <Project>{c533eb01-635a-4cec-85cf-c4b92e82344e}</Project>
+      <Name>FAS.Report</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultra.DbEntity\Ultra.DbEntity.csproj">
+      <Project>{ce990d0b-e38a-4552-a8b3-69daded69e7b}</Project>
+      <Name>Ultra.DbEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ultra.FASControls\Ultra.FASControls.csproj">
+      <Project>{f2a4a5d8-f88e-4f0d-88ef-c8cc3a86c102}</Project>
+      <Name>Ultra.FASControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FinishProceView.resx">
+      <DependentUpon>FinishProceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvRemarkView.resx">
+      <DependentUpon>InvRemarkView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewInStockView.resx">
+      <DependentUpon>NewInStockView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPrdView.resx">
+      <DependentUpon>NewPrdView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdrSplitNumView.resx">
+      <DependentUpon>OdrSplitNumView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPrdView.resx">
+      <DependentUpon>PrintPrdView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdInStockView.resx">
+      <DependentUpon>ProdInStockView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdProceView.resx">
+      <DependentUpon>ProdProceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectProdTrdView.resx">
+      <DependentUpon>SelectProdTrdView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrdEdtView.resx">
+      <DependentUpon>TrdEdtView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrdPrdView.resx">
+      <DependentUpon>TrdPrdView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdtPrdView.resx">
+      <DependentUpon>EdtPrdView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SCTrdEdtView.resx">
+      <DependentUpon>SCTrdEdtView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadImgView.resx">
+      <DependentUpon>UploadImgView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrdCenterView.resx">
+      <DependentUpon>TrdCenterView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

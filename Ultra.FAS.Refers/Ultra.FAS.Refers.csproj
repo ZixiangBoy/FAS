@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9926343A-22D3-450A-B5B0-D03E402338D7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ultra.FAS.Refers</RootNamespace>
+    <AssemblyName>Ultra.FAS.Refers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ref\ChnCharInfo.dll" />
+    <Content Include="Ref\ChnCharInfo.xml" />
+    <Content Include="Ref\Dapper.dll" />
+    <Content Include="Ref\DataAccess.Gui.dll" />
+    <Content Include="Ref\DataAccess.Util.dll" />
+    <Content Include="Ref\EmitMapper.dll" />
+    <Content Include="Ref\EntityFramework.dll" />
+    <Content Include="Ref\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Ref\Microsoft.AspNet.SignalR.Client.dll" />
+    <Content Include="Ref\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="Ref\Microsoft.Web.Infrastructure.xml" />
+    <Content Include="Ref\MoreLinq.dll" />
+    <Content Include="Ref\MSDN.HtmlEditorControl.dll" />
+    <Content Include="Ref\MySql.Data.dll" />
+    <Content Include="Ref\Newtonsoft.Json.dll" />
+    <Content Include="Ref\NLog.dll" />
+    <Content Include="Ref\NPOI.dll" />
+    <Content Include="Ref\NPOI.OOXML.dll" />
+    <Content Include="Ref\NPOI.OpenXml4Net.dll" />
+    <Content Include="Ref\NPOI.OpenXmlFormats.dll" />
+    <Content Include="Ref\System.Linq.Dynamic.dll" />
+    <Content Include="Ref\System.Net.Http.dll" />
+    <Content Include="Ref\System.Net.Http.Formatting.dll" />
+    <Content Include="Ref\System.Net.Http.Formatting.xml" />
+    <Content Include="Ref\System.Net.Http.WebRequest.dll" />
+    <Content Include="Ref\System.Net.Http.WebRequest.xml" />
+    <Content Include="Ref\System.Net.Http.xml" />
+    <Content Include="Ref\System.Web.Http.dll" />
+    <Content Include="Ref\System.Web.Http.WebHost.dll" />
+    <Content Include="Ref\System.Web.Http.WebHost.xml" />
+    <Content Include="Ref\System.Web.Http.xml" />
+    <Content Include="Ref\TopSdk.dll" />
+    <Content Include="Ref\Ultra.Business.Core.dll" />
+    <Content Include="Ref\Ultra.Cache.dll" />
+    <Content Include="Ref\Ultra.Common.dll" />
+    <Content Include="Ref\Ultra.CoreCaller.dll" />
+    <Content Include="Ref\Ultra.DbEntity.dll" />
+    <Content Include="Ref\Ultra.ERP.Core.dll" />
+    <Content Include="Ref\Ultra.ERP.Entity.dll" />
+    <Content Include="Ref\Ultra.ERP.Report.dll" />
+    <Content Include="Ref\Ultra.KEMSG.dll" />
+    <Content Include="Ref\Ultra.Log.dll" />
+    <Content Include="Ref\Ultra.Logic.dll" />
+    <Content Include="Ref\Ultra.Plugins.dll" />
+    <Content Include="Ref\Ultra.Refers.dll" />
+    <Content Include="Ref\Ultra.Surface.dll" />
+    <Content Include="Ref\Ultra.Surface.xml" />
+    <Content Include="Ref\Ultra.TP.dll" />
+    <Content Include="Ref\Ultra.Utility.dll" />
+    <Content Include="Ref\Ultra.Web.Core.dll" />
+    <Content Include="Ref\Ultra.Web.Core.xml" />
+    <Content Include="Ref\Ultra.Win.Core.dll" />
+    <Content Include="Ref\Ultra.WindowsControl.dll" />
+    <Content Include="Ref\Ultra.Xls.dll" />
+    <Content Include="Ref\WinHTMLEditorControl.dll" />
+    <Content Include="Ref\zh-CN\ChnCharInfo.resources.dll" />
+    <Content Include="Ref\zh-Hans\EntityFramework.resources.dll" />
+    <Content Include="Ref\zh-Hans\System.Net.Http.Formatting.resources.dll" />
+    <Content Include="Ref\zh-Hans\System.Net.Http.resources.dll" />
+    <Content Include="Ref\zh-Hans\System.Net.Http.WebRequest.resources.dll" />
+    <Content Include="Ref\zh-Hans\System.Web.Http.resources.dll" />
+    <Content Include="Ref\zh-Hans\System.Web.Http.WebHost.resources.dll" />
+    <Content Include="Ref\zxing.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ref\Ultra.DbEntity.dll.orig" />
+    <None Include="Ref\Ultra.Web.Core.dll.orig" />
+    <None Include="Ref\Ultra.WindowsControl.dll.orig" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

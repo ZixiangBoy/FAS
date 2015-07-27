@@ -1,0 +1,247 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
+
+namespace PetaPoco {
+    public partial class Database {
+        public IDbCommand CreateProcCommand(IDbConnection connection, string sql, params object[] args) {
+            var cmd = CreateCommand(connection, sql, args);
+            cmd.CommandType = CommandType.StoredProcedure;
+            return cmd;
+        }
+
+        public int ExecuteProc(string sql, params object[] args) {
+            try {
+                OpenSharedConnection();
+                try {
+                    using (var cmd = CreateProcCommand(_sharedConnection, sql, args)) {
+                        var retv = cmd.ExecuteNonQuery();
+                        OnExecutedCommand(cmd);
+                        return retv;
+                    }
+                } finally {
+                    CloseSharedConnection();
+                }
+            } catch (Exception x) {
+                if (OnException(x))
+                    throw;
+                return -1;
+            }
+        }
+
+        public IEnumerable<T> QueryNoAutoSelect<T>(string sql, params object[] args) {
+            OpenSharedConnection();
+            try {
+                using (var cmd = CreateCommand(_sharedConnection, sql, args)) {
+                    IDataReader r;
+                    var pd = PetaPoco.Internal.PocoData.ForType(typeof(T));
+                    try {
+                        r = cmd.ExecuteReader();
+                        OnExecutedCommand(cmd);
+                    } catch (Exception x) {
+                        if (OnException(x))
+                            throw;
+                        yield break;
+                    }
+                    var factory = pd.GetFactory(cmd.CommandText, _sharedConnection.ConnectionString, 0, r.FieldCount, r) as Func<IDataReader, T>;
+                    using (r) {
+                        while (true) {
+                            T poco;
+                            try {
+                                if (!r.Read())
+                                    yield break;
+                                poco = factory(r);
+                            } catch (Exception x) {
+                                if (OnException(x))
+                                    throw;
+                                yield break;
+                            }
+
+                            yield return poco;
+                        }
+                    }
+                }
+            } finally {
+                CloseSharedConnection();
+            }
+        }
+
+        public List<T> FetchNoAutoSelect<T>(string sql, params object[] args) {
+            return QueryNoAutoSelect<T>(sql, args).ToList();
+        }
+
+        /// <summary>
+        /// 序列化对象
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="objs"></param>
+        /// <returns></returns>
+        internal static byte[] Serialize<T>(T objs) {
+            IFormatter ift = new BinaryFormatter();
+            byte[] byts = null;
+            using (MemoryStream ms = new MemoryStream()) {
+                ift.Serialize(ms, objs);
+                byts = ms.GetBuffer();
+            }
+            return byts;
+        }
+
+        /// <summary>
+        /// 序列化对象为Json串
+        /// </summary>
+        /// <param name="obj">要被序列化的对象</param>
+        /// <returns></returns>
+        internal static string SerializeJson(object obj) {
+            return Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+        }
+
+        /// <summary>
+        /// 反序列化对象
+        /// </summary>
+        /// <typeparam name="T">泛型类型</typeparam>
+        /// <param name="jsonstr">Json串</param>
+        /// <returns></returns>
+        internal static T DeSerialize<T>(string jsonstr) {
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonstr);
+        }
+
+        /// <summary>
+        /// 反序列化对象
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="byts"></param>
+        /// <returns></returns>
+        internal static T DeSerialize<T>(byte[] byts) {
+            IFormatter ift = new BinaryFormatter();
+            using (MemoryStream ms = new MemoryStream(byts)) {
+                return (T)ift.Deserialize(ms);
+            }
+        }
+
+        /// <summary>
+        /// 深表复制对象
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="objsrc"></param>
+        /// <returns></returns>
+        public static T DeepCopy<T>(T objsrc) {
+            if (null == objsrc) return objsrc;
+            return DeSerialize<T>(Serialize<T>(objsrc));
+        }
+    }
+}
+
+namespace UltraDbEntity {
+    public partial class T_ERP_SerNo {
+        public string SerialNo { get; set; }
+        public int MaxNo { get; set; }
+        public int SerNo { get; set; }
+    }
+<<<<<<< HEAD
+}
+=======
+
+    public partial class T_ERP_Item
+    {
+        /// <summary>
+        /// 获取商品规格名称串
+        /// </summary>
+        /// <returns></returns>
+        public string GetSkuProperties()
+        {
+            //规格+方向+位数+颜色+尺码+材质+功能+皮料+皮号+布料+布号+风格+系列+大类+分类
+            StringBuilder sb = new StringBuilder(30);
+            sb.Append(!string.IsNullOrEmpty(this.SkuName) ? string.Format("规格:{0} ", this.SkuName) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.Direction) ? string.Format("方向:{0} ", this.Direction) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.Seat) ? string.Format("位数:{0} ", this.Seat) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.Color) ? string.Format("颜色:{0} ", this.Color) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.Size) ? string.Format("尺码:{0} ", this.Size) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.Material) ? string.Format("材质:{0} ", this.Material) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.Func) ? string.Format("功能:{0} ", this.Func) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.Surface) ? string.Format("皮料:{0} ", this.Surface) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.SurfaceNums) ? string.Format("皮号:{0} ", this.SurfaceNums) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.Textile) ? string.Format("布料:{0} ", this.Textile) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.TextileNums) ? string.Format("布号:{0} ", this.TextileNums) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.Style) ? string.Format("风格:{0} ", this.Style) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.Series) ? string.Format("系列:{0} ", this.Series) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.Category) ? string.Format("大类:{0} ", this.Category) : string.Empty)
+                .Append(!string.IsNullOrEmpty(this.Class) ? string.Format("分类:{0}", this.Class) : string.Empty);
+            return sb.ToString();
+        }
+
+        string _colorvalue = string.Empty;
+        //static string _switchcolor1 = "167,116,67";
+        //static string _switchcolor2 = "81,142,209";
+        [PetaPoco.Ignore]
+        [System.Xml.Serialization.XmlElement("ColorValue")]
+        public string ColorValue
+        {
+            get
+            {
+                if (IsCombo)
+                {
+                    //return "255, 128, 128";
+                    return string.IsNullOrEmpty(_colorvalue) ? "81,142,209" :
+                        _colorvalue;
+                }
+                else
+                    return _colorvalue;
+
+            }
+            set { _colorvalue = value; }
+        }
+
+        [PetaPoco.Ignore]
+        [System.Xml.Serialization.XmlElement("ComboGuid")]
+        public Guid ComboGuid { get; set; }
+
+        [PetaPoco.Ignore]
+        [System.Xml.Serialization.XmlElement("BusVolume")]
+        public decimal? BusVolume { get; set; }
+
+        [PetaPoco.Ignore]
+        [System.Xml.Serialization.XmlElement("BusFramePrice")]
+        public decimal? BusFramePrice { get; set; }
+
+        [PetaPoco.Ignore]
+        [System.Xml.Serialization.XmlElement("BusPackagePostFee")]
+        public decimal? BusPackagePostFee { get; set; }
+
+        /// <summary>
+        /// 库存数
+        /// </summary>
+        [PetaPoco.Ignore]
+        [System.Xml.Serialization.XmlElement("Qty")]
+        public long Qty { get; set; }
+
+        /// <summary>
+        /// 是否淘宝在架
+        /// </summary>
+        [PetaPoco.Ignore]
+        [System.Xml.Serialization.XmlElement("IsOnSale")]
+        public bool IsOnSale
+        {
+            get { return ApproveStatus.Equals("onsale", StringComparison.OrdinalIgnoreCase); }
+        }
+    }
+
+
+    public partial class T_ERP_ItemImports
+    {
+        [PetaPoco.Ignore]
+        [System.Xml.Serialization.XmlElement("ColorValue")]
+        public string ColorValue
+        {
+            get;
+            set;
+        }
+
+    }
+
+}
+>>>>>>> origin/leo

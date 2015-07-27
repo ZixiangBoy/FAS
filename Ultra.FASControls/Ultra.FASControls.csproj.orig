@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2A4A5D8-F88E-4F0D-88EF-C8CC3A86C102}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ultra.FASControls</RootNamespace>
+    <AssemblyName>Ultra.FASControls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v12.1.Core, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v12.1.Core, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Reports.v12.1.Designer, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1.UI, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1.Extensions, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EmitMapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\EmitMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq, Version=1.0.11522.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ultra.Business.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Business.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Cache, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.CoreCaller, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.CoreCaller.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Logic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Logic.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Surface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Surface.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Web.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Web.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ultra.Win.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ultra.FAS.Refers\Ref\Ultra.Win.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusControls\UserGridEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusControls\StyleGridEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Caller\SerNoCaller_GC.cs" />
+    <Compile Include="Caller\SerNoCaller_ZTY.cs" />
+    <Compile Include="ChartControlEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CtlAfterSalaItemController.cs" />
+    <Compile Include="Controllers\CtlAfterSaleController.cs" />
+    <Compile Include="Controllers\CtlCompanyController.cs" />
+    <Compile Include="Controllers\CtlDeliveryAddrController.cs" />
+    <Compile Include="Controllers\CtlDeliveryController.cs" />
+    <Compile Include="Controllers\CtlDeliveryItemController.cs" />
+    <Compile Include="Controllers\CtlExpensesController.cs" />
+    <Compile Include="Controllers\CtlExpensesTypeController.cs" />
+    <Compile Include="Controllers\CtlFinNameController.cs" />
+    <Compile Include="Controllers\CtlFinRecController.cs" />
+    <Compile Include="Controllers\CtlImageController.cs" />
+    <Compile Include="Controllers\CtlInStockController.cs" />
+    <Compile Include="Controllers\CtlInStockExController.cs" />
+    <Compile Include="Controllers\CtlInStockItemController.cs" />
+    <Compile Include="Controllers\CtlInStockMaterialController.cs" />
+    <Compile Include="Controllers\CtlInventoryController.cs" />
+    <Compile Include="Controllers\CtlInStockMatMasterController.cs" />
+    <Compile Include="Controllers\CtlInventoryMaterialController.cs" />
+    <Compile Include="Controllers\CtlItemController.cs" />
+    <Compile Include="Controllers\CtlItemInStockController.cs" />
+<<<<<<< HEAD
+    <Compile Include="Controllers\CtlItemResponsibleController.cs" />
+=======
+    <Compile Include="Controllers\CtlItemPriceController.cs" />
+    <Compile Include="Controllers\CtlItemPrice_ImptController.cs" />
+>>>>>>> origin/SRX
+    <Compile Include="Controllers\CtlIvtAdjController.cs" />
+    <Compile Include="Controllers\CtlIvtCheckDetailController.cs" />
+    <Compile Include="Controllers\CtlIvtCheckMasterController.cs" />
+    <Compile Include="Controllers\CtlLogController.cs" />
+    <Compile Include="Controllers\CtlMaterialCheckDetailController.cs" />
+    <Compile Include="Controllers\CtlMaterialCheckMasterController.cs" />
+    <Compile Include="Controllers\CtlMaterialCheckResultController.cs" />
+    <Compile Include="Controllers\CtlMaterialController.cs" />
+    <Compile Include="Caller\SerNoCaller_WL.cs" />
+    <Compile Include="Controllers\CtlItemComboController.cs" />
+    <Compile Include="Controllers\CtlItemImportsController.cs" />
+    <Compile Include="Controllers\CtlItemImports_FullBakController.cs" />
+    <Compile Include="Controllers\CtlItemPackSkuController.cs" />
+    <Compile Include="Controllers\CtlItemStyleController.cs" />
+    <Compile Include="Controllers\CtlMaterialIvtAdjController.cs" />
+    <Compile Include="Controllers\CtlMaterialIvtRetController.cs" />
+    <Compile Include="Controllers\CtlMaterial_ImptController.cs" />
+    <Compile Include="Controllers\CtlMenuCtlController.cs" />
+    <Compile Include="Controllers\CtlOrderController.cs" />
+    <Compile Include="Controllers\CtlOrderInStockController.cs" />
+    <Compile Include="Controllers\CtlOrderPrdController.cs" />
+    <Compile Include="Controllers\CtlOrderProcedController.cs" />
+    <Compile Include="Controllers\CtlOrderProcedWorkerController.cs" />
+    <Compile Include="Controllers\CtlPackInStockController.cs" />
+    <Compile Include="Controllers\CtlPostFeeTypeController.cs" />
+    <Compile Include="Controllers\CtlProcedureController.cs" />
+    <Compile Include="Controllers\CtlProduceDosageController.cs" />
+    <Compile Include="Controllers\CtlProduceDosageIptController.cs" />
+    <Compile Include="Controllers\CtlProduceMaterController.cs" />
+    <Compile Include="Controllers\CtlRecvMaterController.cs" />
+    <Compile Include="Controllers\CtlResponsibleController.cs" />
+    <Compile Include="Controllers\CtlRoleController.cs" />
+    <Compile Include="Controllers\CtlRoleSetController.cs" />
+    <Compile Include="Controllers\CtlRoleUserController.cs" />
+    <Compile Include="Caller\SerNoCaller.cs" />
+    <Compile Include="CollapsibleSplitter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CtlMenuNewController.cs" />
+    <Compile Include="Controllers\CtlSerNoController.cs" />
+    <Compile Include="Controllers\CtlSuppliersController.cs" />
+    <Compile Include="Controllers\CtlSuppliers_ImpController.cs" />
+    <Compile Include="Controllers\CtlTradeController.cs" />
+    <Compile Include="Controllers\CtlTradeMarkController.cs" />
+    <Compile Include="Controllers\CtlTradePrdController.cs" />
+    <Compile Include="Controllers\CtlUserController.cs" />
+    <Compile Include="Controllers\CtlV_ERP_DeliveryOrderController.cs" />
+    <Compile Include="Controllers\CtlV_ERP_GetAmountByMonthController.cs" />
+    <Compile Include="Controllers\CtlV_ERP_InventCollectController.cs" />
+    <Compile Include="Controllers\CtlV_ERP_InventoryMaterialController.cs" />
+    <Compile Include="Controllers\CtlV_ERP_InventSelectController.cs" />
+    <Compile Include="Controllers\CtlV_ERP_PrintOrderPrdController.cs" />
+    <Compile Include="Controllers\CtlV_ERP_PrintOrderProceController.cs" />
+    <Compile Include="Controllers\CtlV_ERP_PrintOrderProceDetailController.cs" />
+    <Compile Include="Controllers\CtlWareAreaController.cs" />
+    <Compile Include="Controllers\CtlWareHouseController.cs" />
+    <Compile Include="Controllers\CtlWareLocController.cs" />
+    <Compile Include="Controllers\CtlWorkerController.cs" />
+    <Compile Include="Controllers\CtlWreckPriceController.cs" />
+    <Compile Include="Controllers\CtlWreckTypeController.cs" />
+    <Compile Include="Controls\BasePopupView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\BasePopupView.designer.cs">
+      <DependentUpon>BasePopupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Ctls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DateEditEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DateEditEx.designer.cs">
+      <DependentUpon>DateEditEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EFPager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EFPager.Designer.cs">
+      <DependentUpon>EFPager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Pager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Pager.Designer.cs">
+      <DependentUpon>Pager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extend\MethodExtend.cs" />
+    <Compile Include="GridControlEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LabelTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReportEx.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ChoseWareView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ChoseWareView.designer.cs">
+      <DependentUpon>ChoseWareView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExportDataView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ExportDataView.Designer.cs">
+      <DependentUpon>ExportDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImageUploadView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ImageUploadView.designer.cs">
+      <DependentUpon>ImageUploadView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImageViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ImageViewer.designer.cs">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImportDataView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ImportDataView.designer.cs">
+      <DependentUpon>ImportDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InvalidReasonView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\InvalidReasonView.designer.cs">
+      <DependentUpon>InvalidReasonView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ultra.DbEntity\Ultra.DbEntity.csproj">
+      <Project>{ce990d0b-e38a-4552-a8b3-69daded69e7b}</Project>
+      <Name>Ultra.DbEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\BasePopupView.resx">
+      <DependentUpon>BasePopupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EFPager.resx">
+      <DependentUpon>EFPager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ChoseWareView.resx">
+      <DependentUpon>ChoseWareView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ExportDataView.resx">
+      <DependentUpon>ExportDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ImageUploadView.resx">
+      <DependentUpon>ImageUploadView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ImageViewer.resx">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ImportDataView.resx">
+      <DependentUpon>ImportDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InvalidReasonView.resx">
+      <DependentUpon>InvalidReasonView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
